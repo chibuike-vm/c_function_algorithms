@@ -7,8 +7,10 @@ int change_temp(int *celcius) {
 */
 
 int factorial(int number) {
-//	printf("Please, enter a number: ");
-//	scanf("%d", &number);
+/*
+        printf("Please, enter a number: ");
+        scanf("%d", &number);
+ */
 
 	int fct = 1;
 
@@ -30,6 +32,21 @@ void swap_function(int *a, int *b, int *c, int *d) {
 	printf("\"swap_function scope data output\" a : %d b: %d c: %d d: %d\n\n", *a, *b, *c, *d);
 }
 
+int election_counter(int region_vote_counter, int j) {
+	int region_vote_counter_sum = 0, i;
+
+	char arr_reg[4][6] = {{"North"}, {"South"}, {"West"}, {"East"}};
+	char arr_cand[3][7] = {{"Atiku"}, {"Obi"}, {"Tinubu"}};
+
+	for (i = 0; i < 4; i++) {
+		printf("%s's vote collation for the %s region: ", arr_cand[j], arr_reg[i]);
+		scanf("%d", &region_vote_counter);
+		region_vote_counter_sum += region_vote_counter;
+	} 
+	putchar('\n');
+	return (region_vote_counter_sum);
+
+}
 
 void result_declaration(int a, int b, int c) {
 	if (a > b && a > c) {
